@@ -1,0 +1,21 @@
+CREATE DATABASE IF NOT EXISTS ${MYSQL_DATABASE};
+
+USE ${MYSQL_DATABASE};
+
+CREATE TABLE utente (
+    ID INT NOT NULL AUTO_INCREMENT,
+    nome VARCHAR(255),
+    cognome VARCHAR(255),
+    username VARCHAR(255),
+    password VARCHAR(255),
+    PRIMARY KEY (ID)
+);
+
+CREATE TABLE sdplines (
+    ID INT NOT NULL AUTO_INCREMENT,
+    value VARCHAR(255),
+    session_id VARCHAR(255),
+    u_id INT,
+    PRIMARY KEY (ID),
+    FOREIGN KEY (u_id) REFERENCES utente(ID)
+);
