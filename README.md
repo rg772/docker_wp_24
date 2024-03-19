@@ -31,7 +31,7 @@ This project sets up a local WordPress environment using Docker. Docker allows y
 
 4. **Access your WordPress site**: Once the Docker container is running, you can access your WordPress site by navigating to `http://localhost:8080` in your web browser.
 
-(OTHER/Screenshot 2024-03-19 at 9.46.55 AM.png)
+!(OTHER/Screenshot 2024-03-19 at 9.46.55 AM.png)
 
 
 ## Note
