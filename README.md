@@ -36,5 +36,5 @@ This project sets up a local WordPress environment using Docker. Docker allows y
 
 ## Note
 
-The `start.sh` script exports the environment variables from the `.env` file, so they are accessible within the script. If the `.env` file does not exist, the script will not run correctly.
+The `build_wp_and_run.sh` script exports the environment variables from the `.env` file, so they are accessible within the script. If the `.env` file does not exist, the script will not run correctly.
 # docker_wp_24
