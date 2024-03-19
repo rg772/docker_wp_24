@@ -23,10 +23,10 @@ This project sets up a local WordPress environment using Docker. Docker allows y
 
     Replace the values with your actual database credentials and desired container name. The `DOCKER_IMAGE_NAME` is the name of the Docker image that will be built and run.
 
-3. **Run the `start.sh` script**: This script is located in the root directory of the project. It stops any running Docker containers with the same name as specified in the `.env` file, builds a new Docker image with the specified name, and runs a new Docker container. You can run the script with the following command:
+3. **Run the `build_wp_and_run.sh` script**: This script is located in the root directory of the project. It stops any running Docker containers with the same name as specified in the `.env` file, builds a new Docker image with the specified name, and runs a new Docker container. You can run the script with the following command:
 
     ```bash
-    ./start.sh
+    ./build_wp_and_run.sh
     ```
 
 4. **Access your WordPress site**: Once the Docker container is running, you can access your WordPress site by navigating to `http://localhost:8080` in your web browser.
