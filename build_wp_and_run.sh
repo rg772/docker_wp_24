@@ -6,7 +6,6 @@ then
   export $(cat .env | sed 's/#.*//g' | xargs)
 fi
 
-
 # Build the Docker image
 docker build -t $DOCKER_IMAGE_NAME .
 
