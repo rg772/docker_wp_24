@@ -6,10 +6,6 @@ then
   export $(cat .env | sed 's/#.*//g' | xargs)
 fi
 
-# Stop any running containers of this name
-docker stop $CONTAINER_NAME || true
-docker rm $CONTAINER_NAME || true
-
 # Run docker system prune -a
 # docker system prune -a -f
 
@@ -17,4 +13,12 @@ docker rm $CONTAINER_NAME || true
 docker build -t $DOCKER_IMAGE_NAME .
 
 # Run the container locally
-docker run -p 8080:80 --name $CONTAINER_NAME $DOCKER_IMAGE_NAME
+docker run -d -p 8080:80 --name $CONTAINER_NAME $DOCKER_IMAGE_NAME
+
+# Add WP-CLI to the container
+#docker exec -it $CONTAINER_NAME bash -c "curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar && chmod +x wp-cli.phar && mv wp-cli.phar /usr/local/bin/wp"
+  
+# CLI... reference
+echo To get SSH in
+echo docker exec -it $CONTAINER_NAME /bin/bash    
+
