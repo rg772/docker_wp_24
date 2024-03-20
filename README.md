@@ -1,5 +1,7 @@
+# what
 Just a docker container that runs wordpress. It's been done before and it'll be done again I'm sure. 
 
+# how
 You'll need an `.env` file to contain some information or pipe it in elsewhere
 ```
 MYSQL_DB_HOST=localhost
@@ -18,3 +20,6 @@ THis open a browser
 [http://localhost:8080](http://localhost:8080) 
 
 ![image](./OTHER/8080.png)
+
+# next
+1. map `./wp-content` to volume
